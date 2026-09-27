@@ -66,4 +66,4 @@ This is a 1D linear periodic constant-coefficient model with synthetic Gaussian 
 
 [Final report](docs/final_project_report.md) · [Benchmarks](docs/benchmark_summary.md) · [Consistency audit](docs/final_consistency_audit.md) · [Interview summary](docs/interview_project_summary.md) · [Release preparation](docs/release_summary.md)
 
-Status: **v1.0-ready**, a provisional documentation label. No Git release or tag has been created.
+Release: [**v1.0**](https://github.com/liyingerya/jax-differentiable-pde/releases/tag/v1.0). Archived preparation documents retain their original `v1.0-ready` status.
