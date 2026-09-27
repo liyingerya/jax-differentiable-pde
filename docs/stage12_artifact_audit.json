@@ -1,0 +1,29 @@
+{
+  "figure_byte_reproducibility": true,
+  "figure_files": 20,
+  "sha256": {
+    "figures/01_architecture.png": "19b4f64a8460840a9747975b49c662845c219cef1b30ba4626bacb6edd0e8628",
+    "figures/01_architecture.svg": "9edfa8d68d51e5e2274c6f23bc62c4041c93543b15a61acfc41e4a07efbc7561",
+    "figures/02_refinement.png": "6f4116e8a9bd4d7f0505ada2d18d61e0b520eea978cea97356b1aabf7f0382b6",
+    "figures/02_refinement.svg": "60ef25e3021278017413fa3c64a4109357148def0c7f98c2b22e620cbeb29d3e",
+    "figures/03_parameter_vs_field.png": "06051183b08f3f7c818e5e5b4b03835b48b5462655c92a084e9fcef899491da7",
+    "figures/03_parameter_vs_field.svg": "291e4b921bd9845821c5fd79c55dc94bf6d32c088c45ef6132b70417bfc1c0c9",
+    "figures/04_design_association.png": "cfdc42b66a00a1b4f3be3ac0164fb851f26b84b73aad1a07374798b4732aa1d4",
+    "figures/04_design_association.svg": "3fb87ee7c708eee09d7d46a893a308f037a8b1c657d065f7b36779d73c298f3d",
+    "figures/05_robust_design.png": "c5173431b072ac870a5f8eb8fa2a14d0c5197ddfccf2b4a5660b4ff9579ea1fb",
+    "figures/05_robust_design.svg": "3add84dc94e416a22bf16bc0b4076cab674b5896063984c20c4e15bfaa0765b8",
+    "figures/06_discrepancy_bias.png": "2cdd6a65b9d6d7e04304a01a2d1c18b2752d45695e9b2622f363a44fe2cb1140",
+    "figures/06_discrepancy_bias.svg": "5d135b27bc179ee0bed67bfebcd311816ee3de91ed1a772b44c1bfbba266ce3f",
+    "figures/07_profile_valley.png": "f8ec105f6778d6cfa481e3ca7f14cbce52da88e8cf11648b03add6ffd3a1e800",
+    "figures/07_profile_valley.svg": "f01bb4d2cb6cf500f2a12268d1ac0f3d02aa6325611b6df58709d9ce69c64907",
+    "figures/08_uncertainty.png": "c3a2e98cb5ba666ca9c01c59e2e1e9b9627b14e3eab3bae41a6d0688770fff14",
+    "figures/08_uncertainty.svg": "1332b8d77b461e71fcbe7530b144f73f3afaf72026a893e7b196056b5cb4ebae",
+    "figures/09_stability.png": "894192bd0c7494e780e583c5045681d10fc5ff38501b1fc8767f5ad70ef3f006",
+    "figures/09_stability.svg": "dda755950a85ce2ddb7896d365a764e8f4cceaa4b4ca416ac115554f365ca846",
+    "figures/10_runtime.png": "135c978c4477f6b1f17b6a7b3992b21ab92fdf67414f70fa0383415438c59c6c",
+    "figures/10_runtime.svg": "2257def6878e4e369ffdc54d2cb9782c59e5a4388026d95d63641a5180217462"
+  },
+  "exported_stage11_resume": "PASS 56",
+  "quickstart_output": "Observation shape: (4, 8)\nNMSE: 0.022865214282706887\nGradient in (v, log nu4): [-0.45162904 -0.00159185]\nWarmed loss + gradient: 0.000101 s\n",
+  "visual_review": "All ten PNGs inspected in a contact sheet; axes, legends, labels and titles readable; no clipping observed."
+}

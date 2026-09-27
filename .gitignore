@@ -1,0 +1,21 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.jax_cache/
+jax_cache/
+.matplotlib/
+
+# Local release, editor and benchmark scratch files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.env
+.env.*
+benchmark_scratch/
+.local-benchmarks/

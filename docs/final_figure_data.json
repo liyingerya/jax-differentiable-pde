@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "01_architecture",
+    "stage": "1\u201311",
+    "fields": "Source modules and archived report progression",
+    "transformation": "Conceptual schematic; no numerical data",
+    "caption": "Architecture: validated operators feed differentiable time integration and inverse loss; design, discrepancy and uncertainty are connected analyses."
+  },
+  {
+    "filename": "02_refinement",
+    "stage": 4,
+    "fields": "spatial_refinement[].{N,relative_bias}",
+    "transformation": "relative_bias \u00d7 100",
+    "caption": "Known velocity, continuum A, zero noise; each archived fit uses its declared stability-safe RK4 schedule."
+  },
+  {
+    "filename": "03_parameter_vs_field",
+    "stage": "5,6",
+    "fields": "Stage5 studies.combined_3.run_ids \u2192 runs[].{final_clean_field_relative_l2,absolute_relative_error}; Stage6 studies.severe.run_ids \u2192 runs[].{final_clean_field_relative_l2,relative_nu4_error}",
+    "transformation": "Both errors \u00d7 100; all five seeds per severe study",
+    "caption": "Severe matched sparse/noisy conditions; field and coefficient errors are distinct metrics."
+  },
+  {
+    "filename": "04_design_association",
+    "stage": 7,
+    "fields": "hardening.association_pairs[].{tier,score,median_nu4_error}; hardening.association_rank_correlation",
+    "transformation": "Error \u00d7 100; use hardened results; no reselection or trend refit",
+    "caption": "Thirty frozen top/middle/bottom layouts; negative rank association is descriptive, not causal proof."
+  },
+  {
+    "filename": "05_robust_design",
+    "stage": 8,
+    "fields": "worst_case_recovery.{8,4}.{baseline,joint_E,robust_unweighted,robust_noise_weighted}.mean_relative_nu4_error",
+    "transformation": "Stored worst truth-family mean \u00d7 100; not maximum individual-seed error",
+    "caption": "Eight sensors use 2% noise; four use 5%. Robustness is limited to declared truth families and finite candidate pools."
+  },
+  {
+    "filename": "06_discrepancy_bias",
+    "stage": 9,
+    "fields": "clean.continuum_A/full/M0\u2013M5.final.parameters[0:2]",
+    "transformation": "100 \u00d7 (estimate / physical truth \u2212 1); truth=(1,.002)",
+    "caption": "Full clean continuum A observations. M0 uncorrected; M1 theory; M2/M3 one free correction; M4 both free; M5 fixed calibrated correction."
+  },
+  {
+    "filename": "07_profile_valley",
+    "stage": 10,
+    "fields": "surface.{q_axis,c6_axis,NLL,reference_NLL,valid,valley}",
+    "transformation": "2*(NLL-reference_NLL); transpose q\u00d7c6 grid for plotting; mask invalid points",
+    "caption": "Full-clean M4 surface profiled over v,c\u2083, using the archived hypothetical 2%-RMS precision. Finite local domain; contour levels are diagnostics, not joint coverage claims."
+  },
+  {
+    "filename": "08_uncertainty",
+    "stage": 10,
+    "fields": "bootstrap.continuum_A/8/{M1,M4,M5}.runs[].parameters[1]; profiles.continuum_A/full/{M1,M4,M5}/1.intervals.95.nu4.components",
+    "transformation": "\u03bd\u2084 \u00d7 1000; boxplot median/IQR, whiskers 1.5 IQR; full-clean profile intervals separate panel",
+    "caption": "Left: eight sensors, 2% noise, 100 paired seeds; right: full-clean hypothetical precision, not zero-noise confidence. Different observation protocols must not be conflated. M4 has 86% discrepancy-bound contact in the left ensemble."
+  },
+  {
+    "filename": "09_stability",
+    "stage": 11,
+    "fields": "stability[].{N,rk4_dtmax,imex_dtmax}; stability_scaling",
+    "transformation": "Log\u2013log axes; no new stability computation",
+    "caption": "625 parameter tuples and \u22652049 angles per grid; fitted dt-vs-dx exponents 4.00 and 0.23. Sampling is not proof over the continuous box."
+  },
+  {
+    "filename": "10_runtime",
+    "stage": 11,
+    "fields": "benchmarks filtered status=measured, task\u2208{observations,gradient}, N\u2264256: {N,method,median}",
+    "transformation": "seconds \u00d7 1000; separate tasks; no compile times or estimated points",
+    "caption": "Ten synchronized warmed repetitions. CN is iterative; RK4-power and exact use direct Fourier propagation. Schedules differ in accuracy. Missing fine-grid scan measurements exceed the predeclared cap; lines do not extrapolate."
+  }
+]

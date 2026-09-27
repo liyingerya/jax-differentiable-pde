@@ -1,0 +1,1302 @@
+{
+  "artifact_audit": "stage12_artifact_audit.json",
+  "status": "PASS",
+  "archive_files": 63,
+  "changed_archives": [],
+  "claims": [
+    {
+      "claim": "Matched scalar recovery",
+      "stage": 3,
+      "field": "config.nu4_true; matched.runs[0].recovered_nu4",
+      "value": [
+        0.002,
+        0.0019999999999999953
+      ],
+      "expected": [
+        0.002,
+        0.002
+      ],
+      "tolerance": 1e-15,
+      "status": "PASS"
+    },
+    {
+      "claim": "Continuum refinement, known v",
+      "stage": 4,
+      "field": "spatial_refinement[N=32,48].relative_bias",
+      "value": [
+        18.21540715560934,
+        4.848956025350644
+      ],
+      "expected": [
+        18.215407,
+        4.848956
+      ],
+      "tolerance": 5e-07,
+      "status": "PASS"
+    },
+    {
+      "claim": "Severe scalar sparse/noisy failure",
+      "stage": 5,
+      "field": "studies.combined_3.summary.{mean_absolute_relative_error,mean_final_clean_field_relative_l2}",
+      "value": [
+        44.161614964084706,
+        2.5070673036742264
+      ],
+      "expected": [
+        44.161615,
+        2.507067
+      ],
+      "tolerance": 5e-07,
+      "status": "PASS"
+    },
+    {
+      "claim": "Joint clean Hessian",
+      "stage": 6,
+      "field": "matched_geometry.hessian.condition_number",
+      "value": 1903.8485153080633,
+      "expected": 1903.848515,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "claim": "Matched eight-sensor design",
+      "stage": 7,
+      "field": "hardening.recovery.matched_8_{baseline,joint_E}.by_design.*.mean_relative_nu4_error",
+      "value": [
+        11.94648403342283,
+        5.797915698649437
+      ],
+      "expected": [
+        11.946484,
+        5.797916
+      ],
+      "tolerance": 5e-07,
+      "status": "PASS"
+    },
+    {
+      "claim": "Worst-family diffusion error, 8 sensors",
+      "stage": 8,
+      "field": "worst_case_recovery.8.{baseline,joint_E,robust_noise_weighted}.mean_relative_nu4_error",
+      "value": [
+        38.06516294373509,
+        51.07512977378541,
+        17.53430512580198
+      ],
+      "expected": [
+        38.065163,
+        51.07513,
+        17.534305
+      ],
+      "tolerance": 5e-07,
+      "status": "PASS"
+    },
+    {
+      "claim": "Worst-family diffusion error, 4 sensors",
+      "stage": 8,
+      "field": "worst_case_recovery.4.{baseline,joint_E,robust_noise_weighted}.mean_relative_nu4_error",
+      "value": [
+        42.24257294717586,
+        66.65403488007414,
+        22.027957922603566
+      ],
+      "expected": [
+        42.242573,
+        66.654035,
+        22.027958
+      ],
+      "tolerance": 5e-07,
+      "status": "PASS"
+    },
+    {
+      "claim": "Joint clean continuum discrepancy",
+      "stage": 9,
+      "field": "clean.continuum_A/full/{M0,M1,M5}.final.relative_physical_errors[1]",
+      "value": [
+        10.06075316775947,
+        0.312876588019176,
+        0.007053685093633653
+      ],
+      "expected": [
+        10.060753,
+        0.312877,
+        0.007054
+      ],
+      "tolerance": 5e-07,
+      "status": "PASS"
+    },
+    {
+      "claim": "Free discrepancy compensation",
+      "stage": 9,
+      "field": "geometry.condition_number; normalized_hessian_couplings[1][3]",
+      "value": [
+        14372656.445654092,
+        0.9728089863890997
+      ],
+      "expected": [
+        14372656.445654,
+        0.972808986389
+      ],
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "claim": "Full-clean nominal 95% profile width",
+      "stage": 10,
+      "field": "profiles.continuum_A/full/{M1,M4,M5}/1.intervals.95.nu4.total_width",
+      "value": [
+        0.00025092770551819895,
+        0.00043854148774345107,
+        0.0002501972041103638
+      ],
+      "expected": [
+        0.0002509277055,
+        0.0004385414877,
+        0.0002501972041
+      ],
+      "tolerance": 1e-13,
+      "status": "PASS"
+    },
+    {
+      "claim": "Moderate paired-noise diffusion SD",
+      "stage": 10,
+      "field": "bootstrap.continuum_A/8/{M1,M4,M5}.summary.parameters.sample_sd[1]",
+      "value": [
+        0.0001456786866483964,
+        0.00017826785414235783,
+        0.00014514793270987975
+      ],
+      "expected": [
+        0.00014567868665,
+        0.00017826785414,
+        0.00014514793271
+      ],
+      "tolerance": 1e-13,
+      "status": "PASS"
+    },
+    {
+      "claim": "M4 discrepancy-bound contact",
+      "stage": 10,
+      "field": "bootstrap.continuum_A/8/M4.summary.discrepancy_bound_fraction",
+      "value": 0.86,
+      "expected": 0.86,
+      "tolerance": 1e-15,
+      "status": "PASS"
+    },
+    {
+      "claim": "Timestep stability scaling",
+      "stage": 11,
+      "field": "stability_scaling.{rk4,cnab2}",
+      "value": [
+        4.0000000024961615,
+        0.23051092486911215
+      ],
+      "expected": [
+        4.000000002496,
+        0.230510924869
+      ],
+      "tolerance": 1e-10,
+      "status": "PASS"
+    },
+    {
+      "claim": "RK4 temporal contribution to clean fits",
+      "stage": 11,
+      "field": "inverse.full/{M0,M1,M5}/rk4.rows[0].exact_shift",
+      "value": 2.26973995154367e-12,
+      "expected": 2.26973995154367e-12,
+      "tolerance": 1e-20,
+      "status": "PASS"
+    },
+    {
+      "claim": "Hardened score/error association",
+      "stage": 7,
+      "field": "hardening.association_rank_correlation",
+      "value": -0.7592880978865407,
+      "expected": -0.7592880978865407,
+      "tolerance": 1e-15,
+      "status": "PASS"
+    },
+    {
+      "claim": "Severe joint relative errors",
+      "stage": 6,
+      "field": "studies.severe.summary.{mean_relative_v_error,mean_relative_nu4_error}",
+      "value": [
+        0.005690794346168837,
+        0.4693455315015343
+      ],
+      "expected": [
+        0.005690794346168837,
+        0.4693455315015343
+      ],
+      "tolerance": 1e-15,
+      "status": "PASS"
+    },
+    {
+      "claim": "Exact warmed observation timing, N32",
+      "stage": 11,
+      "field": "benchmarks[key=32/exact/observations].median",
+      "value": 4.4312968384474516e-05,
+      "expected": 4.4e-05,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "claim": "Exponential semigroup precision",
+      "stage": 11,
+      "field": "symbols.exponential.semigroup[0].max_abs",
+      "value": 4.440892098500626e-16,
+      "expected": 4.440892098500626e-16,
+      "tolerance": 1e-25,
+      "status": "PASS"
+    }
+  ],
+  "links": [
+    {
+      "file": "README.md",
+      "target": "figures/01_architecture.png",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_key_results.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_project_report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/test_matrix.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/reproduction.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/stage_index.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_project_report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "figures/",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_project_report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_project_report.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/benchmark_summary.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/final_consistency_audit.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/interview_project_summary.md",
+      "exists": true
+    },
+    {
+      "file": "README.md",
+      "target": "docs/release_summary.md",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_design.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_discrepancy.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_identifiability.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_integrators.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_inverse.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_joint_inverse.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_observations.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_operators.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_refinement.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_robust_design.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_solver.py",
+      "exists": true
+    },
+    {
+      "file": "docs/test_matrix.md",
+      "target": "../tests/test_stage7_hardening.py",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage3_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage3_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage4_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage4_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage5_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage5_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage6_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage6_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage7_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage7_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage8_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage8_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage9_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage9_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_key_results.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/release_summary.md",
+      "target": "stage12_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/release_summary.md",
+      "target": "final_project_report.md",
+      "exists": true
+    },
+    {
+      "file": "docs/release_summary.md",
+      "target": "reproduction.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage_index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage1_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage2_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage3_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage4_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage5_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage6_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage7_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage8_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage9_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "benchmark_summary.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage3_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage3_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage4_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage4_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage5_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage5_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage6_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage6_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage7_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage7_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage8_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage8_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage9_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage9_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/01_architecture.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/02_refinement.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/03_parameter_vs_field.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/04_design_association.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/05_robust_design.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/06_discrepancy_bias.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/07_profile_valley.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/08_uncertainty.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/09_stability.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "../figures/10_runtime.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "reproduction.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "final_consistency_audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "test_matrix.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_project_report.md",
+      "target": "release_summary.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage1_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/01_architecture.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/01_architecture.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage4_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/02_refinement.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/02_refinement.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage5_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage6_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/03_parameter_vs_field.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/03_parameter_vs_field.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage7_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/04_design_association.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/04_design_association.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/05_robust_design.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/05_robust_design.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/06_discrepancy_bias.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/06_discrepancy_bias.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/07_profile_valley.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/07_profile_valley.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/08_uncertainty.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/08_uncertainty.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/09_stability.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/09_stability.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/10_runtime.svg",
+      "exists": true
+    },
+    {
+      "file": "docs/final_figure_provenance.md",
+      "target": "../figures/10_runtime.png",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage12_preservation.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage3_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage4_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage5_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage6_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage7_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage7_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage6_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/final_consistency_audit.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage1_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage2_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage3_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage3_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage4_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage4_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage5_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage5_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage6_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage6_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage7_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage7_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage8_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage8_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage9_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage9_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage10_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage10_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage_index.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/interview_project_summary.md",
+      "target": "stage_index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/interview_project_summary.md",
+      "target": "final_key_results.md",
+      "exists": true
+    },
+    {
+      "file": "docs/interview_project_summary.md",
+      "target": "final_consistency_audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/reproduction.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/reproduction.md",
+      "target": "stage_index.md",
+      "exists": true
+    },
+    {
+      "file": "docs/benchmark_summary.md",
+      "target": "stage11_validation.md",
+      "exists": true
+    },
+    {
+      "file": "docs/benchmark_summary.md",
+      "target": "stage11_results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage12_validation.md",
+      "target": "stage12_artifact_audit.json",
+      "exists": true
+    },
+    {
+      "file": "docs/stage12_validation.md",
+      "target": "final_consistency_audit.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage12_validation.md",
+      "target": "release_summary.md",
+      "exists": true
+    },
+    {
+      "file": "docs/stage12_validation.md",
+      "target": "final_figure_provenance.md",
+      "exists": true
+    }
+  ],
+  "pytest": "124 passed in 35.22s",
+  "acceptance": {
+    "All Stage 1\u201311 tests pass": true,
+    "Archived scientific files byte-preserved": true,
+    "Final technical report exists": true,
+    "Concise final README exists": true,
+    "Ten figures exist with exact provenance": true,
+    "Reproduction guide exists": true,
+    "Stage index exists": true,
+    "Test matrix exists": true,
+    "Benchmark summary exists": true,
+    "Interview summary exists": true,
+    "Scientific consistency audit passes": true,
+    "Final documentation links resolve": true,
+    "Cache/venv/OS artifacts excluded from release manifest": true,
+    "Limitations explicit": true,
+    "No new core physics or scientific study": true
+  }
+}
